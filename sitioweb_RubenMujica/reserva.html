@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Find-a-Car</title>
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <script src="main.js"></script>
+        <meta name="keywords" content="vehículo, coche, alquiler">
+        <meta name="description" content="Find a Car es la empresa de reserva de vehículos que siempre has estado buscando,
+        con las condiciones más económicas y más comodas para una mayor satisfacción de nuestros clientes.">
+        <meta name="subject" content="Alquiler de vehículos">
+        <meta name="author" content="Ruben Mujica Sanchez, ruben.mujicasanchez@alum.uca.es">
+        <meta name="copyright" content="Find a Car">
+        <link rel="icon" href="logo.ico">
+        <link href="pagina.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="js/validacion-formulario.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body id="reserva">
+        <header id="Header">
+            <a href="./index.html"><img  class= "logo" src="Imagenes/logo.jpg" alt="logo" width="100"></a>
+            <h1>Find a Car</h1>           
+            <h3 id = "h3">El alquiler al mejor precio</h3>
+            <nav>
+                <ul><li>
+                    <a href="./index.html" class="inicio">Inicio de la página</a>
+                    <a href="./reserva.html" class="reserv">Reserva un vehículo</a>
+                    <a href="./salas.html" class="vehiculos">Nuestros vehículos</a>
+                    <a href="./X.html" class="emp">Nuestra empresa</a>
+                </li>
+                </ul>
+            </nav>
+            
+        </header>
+        
+        <form id="form_contact" class="fondorojo">
+            <p>
+                Lugar de recogida: <input id="lugar" class="uno" type="text" required list="lugar">
+                <datalist id="lugar">
+                    <option value="Barcelona"></option>
+                    <option value="Madrid"></option>
+                    <option value="Cadiz"></option>
+                    <option value="Jerez de la Frontera"></option>
+                    <option value="Valencia"></option>
+                </datalist>
+                Nombre completo: <input class="uno" id="nombre" type="text" required>
+                Correo electrónico: <input id="correo" class="uno" type="email" required><br><br>
+                Número de plazas mínimo que necesita: <input id="plazas" class="dos" type="text" required>
+                Tipo de vehículo: 
+                <select id="Tipo" class="dos" name="Tipo de Vehículo">
+                    <option value="-1">Elige una opción</option>
+                    <hr>
+                    <option value="1">Citroen C3</option>
+                    <option value="2">Opel Corsa 5Door</option>
+                    <hr>
+                    <option value="3">Peugeot 3008</option>
+                    <option value="4">Kia Forte</option>
+                    <hr>
+                    <option value="5">Tesla Model 3</option>
+                    <option value="6">BMW 5 Series</option>
+                    <hr>
+                    <option value="7">Mercedes-Benz V-Class</option>
+                </select> <br><br>
+                Recogida: <input id="recogida" class="dos" type="date" value="2024-04-04" required>
+                Devolución: <input id="devolucion" class="dos" type="date" value="2024-04-11" required> <br><br>
+                Hora en el que recogerá su vehículo: <input id="box1" type="checkbox" name="grupo" onchange="limitarSeleccion(this)"> 8.00-9.00 <input id="box2" type="checkbox" name="grupo" onchange="limitarSeleccion(this)"> 9.00-10.00 
+                <input id="box3" type="checkbox" name="grupo" onchange="limitarSeleccion(this)"> 10.00-11.00 <input id="box4" type="checkbox" name="grupo" onchange="limitarSeleccion(this)"> 11.00-12.00 <input id="box5" type="checkbox" name="grupo" onchange="limitarSeleccion(this)"> 12.00-13.00 <input id="box6" type="checkbox" name="grupo" onchange="limitarSeleccion(this)"> 13.00-14.00
+                <input id="box7" type="checkbox" name="grupo" onchange="limitarSeleccion(this)"> 14.00-15.00 <input id="box8" type="checkbox" name="grupo" onchange="limitarSeleccion(this)"> 15.00-16.00 <input id="box9" type="checkbox" name="grupo" onchange="limitarSeleccion(this)"> 16.00-17.00 <input id="box10" type="checkbox" name="grupo" onchange="limitarSeleccion(this)"> 17.00-18.00
+            </p>
+            <button class="boton" type="reset">
+                <span>Borrar formulario</span>
+            </button>
+            <button class="boton" type="submit">
+                <span>Enviar formulario</span>
+            </button>
+
+        </form>
+        <footer id="foot">
+            <ul>
+                <li>Copyright &copy; 2024. Find-a-car.com. Todos los derechos reservados.</li>
+                <li>Contacta con nosotros: <a class="nuestraem" href="mailto:rubenmujicasanchez@gmail.com">find-a-car@gmail.com</a></li>
+                <li>Tel: <a class="nuestraem" href="tel:684353654">684353654</a></li>
+            </ul>
+            
+        </footer>
+    </body>
+</html>
